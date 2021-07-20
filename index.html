@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./app.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <header>
+    <div class="title-section">
+      <h1>Accounts Profit and Loss Summary</h1>
+    </div>
+      <div class="header-buttons">
+        <div class="button calculate-button" id="calculate" >
+          Run Calculations
+        </div>
+        <div class="button clear-button" id="clear-calculate">Clear</div>
+      </div>
+    </header>
+      <div id="averages-legend"></div>
+    </div>
+    <table class="my-table" id="table">
+      <thead>
+        <tr class="table-row">
+          <th class="table-header" id="account-name">Account Name</th>
+          <th class="table-header" id="market-value">Market Value</th>
+          <th class="table-header" id="profit-loss-int">Profit/Loss ($)</th>
+          <th class="table-header" id="profit-loss-perc">Profit/Loss (%)</th>
+        </tr>
+      </thead>
+      <tbody id="table-body">
+        <tr class="table-row">
+          <td class="table-cell">Debee Dagg</td>
+          <td class="table-cell">2031866</td>
+          <td class="table-cell">-531309</td>
+          <td class="table-cell">-26</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Jermayne Grise</td>
+          <td class="table-cell">3116258</td>
+          <td class="table-cell">474848</td>
+          <td class="table-cell">15</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Dehlia Kleiner</td>
+          <td class="table-cell">4214560</td>
+          <td class="table-cell">438344</td>
+          <td class="table-cell">10</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Cariotta Djekovic</td>
+          <td class="table-cell">4790492</td>
+          <td class="table-cell">712644</td>
+          <td class="table-cell">15</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Inger Selby</td>
+          <td class="table-cell">4548717</td>
+          <td class="table-cell">-275749</td>
+          <td class="table-cell">-6</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Tricia Lindfors</td>
+          <td class="table-cell">2868988</td>
+          <td class="table-cell">-993851</td>
+          <td class="table-cell">-35</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Ethe Driver</td>
+          <td class="table-cell">3545477</td>
+          <td class="table-cell">988347</td>
+          <td class="table-cell">28</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Carmella Phillp</td>
+          <td class="table-cell">2387930</td>
+          <td class="table-cell">395529</td>
+          <td class="table-cell">17</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Christan Rushforth</td>
+          <td class="table-cell">2701933</td>
+          <td class="table-cell">230178</td>
+          <td class="table-cell">9</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Rusty Dymoke</td>
+          <td class="table-cell">2010695</td>
+          <td class="table-cell">836946</td>
+          <td class="table-cell">42</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Darbie Pisco</td>
+          <td class="table-cell">3528847</td>
+          <td class="table-cell">-455878</td>
+          <td class="table-cell">-13</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Viv Dinnis</td>
+          <td class="table-cell">4252070</td>
+          <td class="table-cell">813401</td>
+          <td class="table-cell">19</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Towney Robiot</td>
+          <td class="table-cell">2488681</td>
+          <td class="table-cell">-533508</td>
+          <td class="table-cell">-21</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Annabela Heisman</td>
+          <td class="table-cell">2219113</td>
+          <td class="table-cell">-211709</td>
+          <td class="table-cell">-10</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Zerk Powers</td>
+          <td class="table-cell">4799532</td>
+          <td class="table-cell">-677004</td>
+          <td class="table-cell">-14</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Eleanor Oldrey</td>
+          <td class="table-cell">4049376</td>
+          <td class="table-cell">-919000</td>
+          <td class="table-cell">-23</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Dotti MacMoyer</td>
+          <td class="table-cell">4281406</td>
+          <td class="table-cell">488234</td>
+          <td class="table-cell">11</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Tiffy Doble</td>
+          <td class="table-cell">2689851</td>
+          <td class="table-cell">0</td>
+          <td class="table-cell">0</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Charita Oxenford</td>
+          <td class="table-cell">3565395</td>
+          <td class="table-cell">759923</td>
+          <td class="table-cell">21</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Millicent Beamish</td>
+          <td class="table-cell">2938579</td>
+          <td class="table-cell">-568309</td>
+          <td class="table-cell">-19</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Stephani Bandt</td>
+          <td class="table-cell">4070941</td>
+          <td class="table-cell">-24707</td>
+          <td class="table-cell">-1</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Nickie Wibrew</td>
+          <td class="table-cell">3183081</td>
+          <td class="table-cell">-51044</td>
+          <td class="table-cell">-2</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Lorianna Quadling</td>
+          <td class="table-cell">4190815</td>
+          <td class="table-cell">942553</td>
+          <td class="table-cell">22</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Cristal Muckart</td>
+          <td class="table-cell">2020418</td>
+          <td class="table-cell">-991338</td>
+          <td class="table-cell">-49</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Anitra Cloute</td>
+          <td class="table-cell">4825388</td>
+          <td class="table-cell">122493</td>
+          <td class="table-cell">3</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Willis Rannigan</td>
+          <td class="table-cell">4958261</td>
+          <td class="table-cell">-382948</td>
+          <td class="table-cell">-8</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Cos Rapps</td>
+          <td class="table-cell">3771029</td>
+          <td class="table-cell">-485797</td>
+          <td class="table-cell">-13</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Tann McKew</td>
+          <td class="table-cell">2428870</td>
+          <td class="table-cell">332433</td>
+          <td class="table-cell">14</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Dita Nannini</td>
+          <td class="table-cell">2712661</td>
+          <td class="table-cell">-845761</td>
+          <td class="table-cell">-31</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Shaun Gave</td>
+          <td class="table-cell">2375749</td>
+          <td class="table-cell">434058</td>
+          <td class="table-cell">18</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Sonia Armitage</td>
+          <td class="table-cell">4068092</td>
+          <td class="table-cell">0</td>
+          <td class="table-cell">0</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Ashton Bonafacino</td>
+          <td class="table-cell">4742202</td>
+          <td class="table-cell">-993301</td>
+          <td class="table-cell">-21</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Lewie Shorte</td>
+          <td class="table-cell">3170496</td>
+          <td class="table-cell">-671786</td>
+          <td class="table-cell">-21</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Shanna Riep</td>
+          <td class="table-cell">4971199</td>
+          <td class="table-cell">-59850</td>
+          <td class="table-cell">-1</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Gusty Butland</td>
+          <td class="table-cell">4851681</td>
+          <td class="table-cell">645854</td>
+          <td class="table-cell">13</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Dorelia Deyenhardt</td>
+          <td class="table-cell">3029000</td>
+          <td class="table-cell">97611</td>
+          <td class="table-cell">3</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Skelly Normanville</td>
+          <td class="table-cell">4991549</td>
+          <td class="table-cell">416358</td>
+          <td class="table-cell">8</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Clerissa Fawckner</td>
+          <td class="table-cell">2170128</td>
+          <td class="table-cell">-809124</td>
+          <td class="table-cell">-37</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Cilka Lindwall</td>
+          <td class="table-cell">2630275</td>
+          <td class="table-cell">184871</td>
+          <td class="table-cell">7</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Bear O'Heneghan</td>
+          <td class="table-cell">3443359</td>
+          <td class="table-cell">868391</td>
+          <td class="table-cell">25</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Herta Gellett</td>
+          <td class="table-cell">3289805</td>
+          <td class="table-cell">218355</td>
+          <td class="table-cell">7</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Shanda Roistone</td>
+          <td class="table-cell">4067239</td>
+          <td class="table-cell">-327112</td>
+          <td class="table-cell">-8</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Vinny Mancktelow</td>
+          <td class="table-cell">2774332</td>
+          <td class="table-cell">560965</td>
+          <td class="table-cell">20</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Dniren Moult</td>
+          <td class="table-cell">3748426</td>
+          <td class="table-cell">-383015</td>
+          <td class="table-cell">-10</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Lucian Oldershaw</td>
+          <td class="table-cell">4487196</td>
+          <td class="table-cell">0</td>
+          <td class="table-cell">0</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Melva Burge</td>
+          <td class="table-cell">4523578</td>
+          <td class="table-cell">-649307</td>
+          <td class="table-cell">-14</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Melesa Aizkovitch</td>
+          <td class="table-cell">4610896</td>
+          <td class="table-cell">-505176</td>
+          <td class="table-cell">-11</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-cell">Zora Road</td>
+          <td class="table-cell">4399116</td>
+          <td class="table-cell">-306122</td>
+          <td class="table-cell">-7</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
